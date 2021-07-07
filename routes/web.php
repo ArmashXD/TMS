@@ -18,11 +18,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::group(['prefix'=>'dashboard', 'middleware'=>'auth'],function(){
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::Resources([
+        'tasks' => TaskController::class,
+    ]);
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
-Route::get('/home', function() {
-    return view('home');
-})->name('home')->middleware('auth');
