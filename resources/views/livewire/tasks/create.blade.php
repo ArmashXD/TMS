@@ -1,6 +1,9 @@
-<div>
-    <h2> Create A New Task</h2>
+<div class="card shadow-lg rounded">
+  <div class="card-title">
 
+    <h2 style="margin: 10px"> Create A New Task</h2>
+  </div>
+  <div class="card-body">
     @if (count($errors) > 0)
       <div class="alert alert-danger">
           <a href="#" class="close" data-dismiss="alert" style="text-decoration: none; color: white">&times;</a>
@@ -32,5 +35,6 @@
     
         <button type="submit" class="btn btn-success rounded shadow-lg float-right" >Submit</button>
       </form>
-    
+    </div>
+
 </div>
