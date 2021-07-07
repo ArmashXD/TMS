@@ -248,7 +248,7 @@ return [
         ],
         [
             'text'        => 'Your Tasks',
-            'url'         => 'admin/pages',
+            'url'         => 'dashboard/tasks',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
