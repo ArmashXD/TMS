@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+// use App\Traits\RecordSignature;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Task extends Model
 {
+    // use RecordSignature;
     /**
      * The "type" of the auto-incrementing ID.
      * 
