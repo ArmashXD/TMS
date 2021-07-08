@@ -20,14 +20,14 @@ class Tasks extends Component
         $this->validate([
             'title' => 'required|min:5',
         ]);
-
         Task::create([
             'user_id' => auth()->id(),
             'heading' => $this->title,
             'description' => $this->content,
         ]);      
-
         session()->flash('success','Stored Successfully');
+        $this->resetInput();
+
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class Tasks extends Component
             $this->updateMode = false;
         }
         session()->flash('success','Updated Successfully');
-
+        $this->resetInput();
     }
 
     public function destroy($id)
@@ -62,5 +62,16 @@ class Tasks extends Component
         $task = Task::findOrfail($id);
         $task->delete($id);
         session()->flash('success','Deleted Successfully');
+    }
+
+    public function cancel()
+    {
+        $this->updateMode = false;
+    }
+
+    public function resetInput()
+    {
+        $this->title = '';
+        $this->content = '';
     }
 }

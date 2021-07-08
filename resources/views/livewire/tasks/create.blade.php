@@ -30,11 +30,17 @@
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Content</label>
-          <textarea class="form-control" wire:model="content"></textarea>
+          <textarea class="form-control" wire:model="content" id="mytextarea"></textarea>
         </div>
     
-        <button type="submit" class="btn btn-success rounded shadow-lg float-right" >Submit</button>
+        <button type="submit" class="btn btn-success rounded shadow-lg float-right" >CREATE</button>
       </form>
     </div>
 
 </div>
+
+<script>
+    // tinymce.init({
+    //     selector: '#mytextarea'
+    //   });
+</script>

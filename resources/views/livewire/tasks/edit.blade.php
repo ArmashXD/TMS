@@ -1,5 +1,9 @@
-<div>
-    <h2> Edit Task</h2>
+<div class="card shadow-lg rounded">
+  <div class="card-title">
+
+    <h2 style="margin: 10px"> Edit Task</h2>
+  </div>
+  <div class="card-body">
 
     @if (count($errors) > 0)
       <div class="alert alert-danger">
@@ -31,7 +35,9 @@
           <textarea class="form-control" wire:model="content"></textarea>
         </div>
     
-        <button type="submit" class="btn btn-success rounded shadow-lg float-right" >Submit</button>
+        <button type="submit" class="btn btn-success rounded shadow-lg float-right" >UPDATE</button>
       </form>
-    
+      <button class="btn btn-danger shadow-lg float-right" style="margin-right: 4px;" wire:click="cancel()"> CANCEL</button>
+
+  </div>  
 </div>
