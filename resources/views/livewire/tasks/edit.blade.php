@@ -37,7 +37,7 @@
     
         <button type="submit" class="btn btn-success rounded shadow-lg float-right" >UPDATE</button>
       </form>
-      <button class="btn btn-danger shadow-lg float-right" style="margin-right: 4px;" wire:click="cancel()"> CANCEL</button>
+      <button class="btn btn-danger shadow-lg float-right font-weight-bold" style="margin-right: 4px;" wire:click="cancel()"> CANCEL</button>
 
   </div>  
 </div>

@@ -33,7 +33,7 @@
           <textarea class="form-control" wire:model="content" id="mytextarea"></textarea>
         </div>
     
-        <button type="submit" class="btn btn-success rounded shadow-lg float-right" >CREATE</button>
+        <button type="submit" class="btn btn-success rounded shadow-lg float-right font-weight-bold" >CREATE</button>
       </form>
     </div>
 
