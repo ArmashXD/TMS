@@ -21,7 +21,9 @@
 
     {{-- Custom stylesheets (pre AdminLTE) --}}
     @yield('adminlte_css_pre')
+    {{-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> --}}
 
+ 
     {{-- Base Stylesheets --}}
     @if(!config('adminlte.enabled_laravel_mix'))
         <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
