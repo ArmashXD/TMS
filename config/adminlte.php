@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -250,13 +249,11 @@ return [
             'text'        => 'Your Tasks',
             'url'         => 'dashboard/tasks',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'My Profile',
+            'url'  => 'dashboard/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
