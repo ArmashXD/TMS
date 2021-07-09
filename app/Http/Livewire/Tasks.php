@@ -9,6 +9,7 @@ class Tasks extends Component
 {
     public $userId, $title, $content, $selected_id;
     public $updateMode = false;
+    public $createMode = false;
 
     public function render()
     {
