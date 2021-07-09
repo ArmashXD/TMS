@@ -56,12 +56,7 @@
         
         </div>
         <div class="card-body">
-            <p>@php 
-                echo StringHelper::readMore($row->description, 0, 320);
-                @endphp</p>
-           
-            
-           
+            <p>@php  echo StringHelper::readMore($row->description, 320); @endphp</p>
         </div>
         <div class="card-footer"> 
             <button wire:click="edit({{$row->id}})" class="btn btn btn-info py-0"><i class="fa fa-pen"></i></button> 
