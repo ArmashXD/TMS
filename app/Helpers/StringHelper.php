@@ -17,7 +17,8 @@ class StringHelper{
 
     public static function readMore($string, $start)
     {
-        return Str::limit($string, $start, $end='.......');
+        return Str::limit($string, $start, $end='....');
     }
 
+    
 }

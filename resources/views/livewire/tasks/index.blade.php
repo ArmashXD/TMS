@@ -38,14 +38,11 @@
   @endif
   @endif
 
-
   <br>
   <br>
  <div class="row">
-     
     @foreach($tasks as $key => $row)
     <div class="col-md-4">
-
     <div class="card rounded shadow"> 
             <div class="card-header" style="margin: 10px">
                 <h3>{{$row->heading}}
@@ -56,19 +53,27 @@
         
         </div>
         <div class="card-body">
-            <p>@php  echo StringHelper::readMore($row->description, 320); @endphp</p>
+            @if ($readMore)
+            <p>@php echo $row->description @endphp</p>
+            @else
+            <p>@php echo StringHelper::readMore($row->description, 320); @endphp</p>
+            @endif
         </div>
         <div class="card-footer"> 
-            <button wire:click="edit({{$row->id}})" class="btn btn btn-info py-0"><i class="fa fa-pen"></i></button> 
+            <button wire:click="edit({{$row->id}})" class="btn btn-info py-0"><i class="fa fa-pen"></i></button> 
+            @if ($readMore)
+            <button wire:click="$set('readMore', false)" class="btn btn-secondary py-0"><i class="fa fa-eye"></i></button> 
+            @else
+            <button wire:click="$set('readMore', true)" class="btn btn-outline-secondary py-0"><i class="fa fa-eye"></i></button> 
+            @endif
             <span class="badge badge-primary float-right" style="margin-top: 4px;">
                 {{ $row->created_at->diffForHumans() }}
               </span>
         </div>
     </div>
 </div>
-
-        <br>
-
+<br>
+      
     @endforeach
 </div>
 

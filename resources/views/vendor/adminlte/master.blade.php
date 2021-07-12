@@ -103,7 +103,11 @@
             <livewire:scripts />
         @endif
     @endif
-
+    <script type="text/javascript">
+        window.livewire.on('userStore', () => {
+            $('#exampleModalLong').modal('hide');
+        });
+    </script>
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
 
