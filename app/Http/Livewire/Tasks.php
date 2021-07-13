@@ -18,6 +18,13 @@ class Tasks extends Component
         return view('livewire.tasks.index', ['tasks' => Task::all()]);
     }
 
+    public function changeStatus($id)
+    {
+        $task = Task::find($id);
+        $task->status = $task->status == false ? true : false;
+        $task->update();
+    }
+
     public function storeTask()
     {
         $this->validate([

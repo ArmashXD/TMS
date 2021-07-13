@@ -57,6 +57,7 @@
         </div>
         <div class="card-footer"> 
             <button wire:click="edit({{$row->id}})" class="btn btn-info py-0"><i class="fa fa-pen"></i></button> 
+            <span  wire:click="changeStatus({{ $row->id }})" class="badge badge-{{ $row->status ? 'success' : 'danger' }}" style="margin-top: 4px;">{{ $row->status ? 'ACTIVE' : 'IN-ACTIVE' }}</span>
             {{-- @if ($show == true)
             <button wire:click="$set('show', false)" class="btn btn-secondary py-0"><i class="fa fa-eye"></i></button> 
             @else
