@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Content</label>
-          <textarea class="form-control" wire:model="content" id="mytextarea"></textarea>
+          <textarea class="form-control" wire:model="content" id="mytextarea" rows="10"></textarea>
         </div>
     
         <button type="submit" class="btn btn-success rounded shadow-lg float-right font-weight-bold" >CREATE</button>

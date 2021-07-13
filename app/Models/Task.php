@@ -27,7 +27,7 @@ class Task extends Model
     /**
      * @var array
      */
-    protected $fillable = ['user_id', 'heading', 'description', 'status', 'created_at', 'updated_at'];
+    protected $fillable = ['user_id', 'heading', 'description', 'status', 'priority_id','created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -35,5 +35,13 @@ class Task extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function priority()
+    {
+        return $this->belongsTo(Priority::class);
     }
 }

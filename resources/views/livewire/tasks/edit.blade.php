@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Content</label>
-          <textarea class="form-control" wire:model="content"></textarea>
+          <textarea class="form-control" wire:model="content" rows="10"></textarea>
         </div>
     
         <button type="submit" class="btn btn-success rounded shadow-lg float-right" >UPDATE</button>

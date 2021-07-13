@@ -53,19 +53,15 @@
         
         </div>
         <div class="card-body">
-            @if ($readMore)
-            <p>@php echo $row->description @endphp</p>
-            @else
             <p>@php echo StringHelper::readMore($row->description, 320); @endphp</p>
-            @endif
         </div>
         <div class="card-footer"> 
             <button wire:click="edit({{$row->id}})" class="btn btn-info py-0"><i class="fa fa-pen"></i></button> 
-            @if ($readMore)
-            <button wire:click="$set('readMore', false)" class="btn btn-secondary py-0"><i class="fa fa-eye"></i></button> 
+            {{-- @if ($show == true)
+            <button wire:click="$set('show', false)" class="btn btn-secondary py-0"><i class="fa fa-eye"></i></button> 
             @else
-            <button wire:click="$set('readMore', true)" class="btn btn-outline-secondary py-0"><i class="fa fa-eye"></i></button> 
-            @endif
+            <button wire:click="$set('show', true)" class="btn btn-outline-secondary py-0"><i class="fa fa-eye"></i></button> 
+            @endif --}}
             <span class="badge badge-primary float-right" style="margin-top: 4px;">
                 {{ $row->created_at->diffForHumans() }}
               </span>

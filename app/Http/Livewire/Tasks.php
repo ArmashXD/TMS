@@ -4,13 +4,14 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Task;
+use App\Helpers\StringHelper;
 
 class Tasks extends Component
 {
     public $userId, $title, $content, $selected_id;
     public $updateMode = false;
     public $createMode = false;
-    public $readMore = false;
+    public $description = "";
 
     public function render()
     {
