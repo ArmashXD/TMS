@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+    <div class="col-md-3 col-sm-3 col-lg-3 col-xs-12">
         <div class="card shadow-lg rounded">
             <div class="card-header" style="background-image: linear-gradient(to right,#2193b0, #6dd5ed); color: white;">
                 <div class="card-title font-weight-bolder">
@@ -20,14 +20,13 @@
                                       <input class="dropdown-item" wire:click="updateBoard({{$new->task->id}},2)" type="text" readonly value="In Progress" style="cursor: pointer"/>
                                       <input class="dropdown-item" wire:click="updateBoard({{$new->task->id}},3)"  type="text" readonly value="Pending" style="cursor: pointer"/>
                                       <input class="dropdown-item" wire:click="updateBoard({{$new->task->id}},4)"  type="text" readonly value="Completed" style="cursor: pointer"/>
-                                      <input class="dropdown-item" wire:click="updateBoard({{$new->task->id}},5)"  type="text" readonly value="Due" style="cursor: pointer"/>
                                     </div>
                                   </div>
                             </div>
                           </div>
                           <div class="card-footer" style="background: transparent;">
                             <div class="float-right mt-2">
-                                <span class="badge badge-primary">{{ $new->task->created_at->diffForHumans() }}</span>
+                                <span class="badge badge-primary">{{ $new->created_at->diffForHumans() }}</span>
                                 <span class="badge badge-primary">{{ $new->task->priority->name }}</span>
                             </div>
                           </div>
@@ -36,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+    <div class="col-md-3 col-sm-3 col-lg-3 col-xs-12">
         <div class="card shadow-lg rounded">
             <div class="card-header" style="background-image: linear-gradient(to right,#fc4a1a, #f7b733); color: white;">
                 <div class="card-title font-weight-bolder">
@@ -56,14 +55,13 @@
                                   <input class="dropdown-item" wire:click="updateBoard({{$in->task->id}},2)" type="text" readonly value="In Progress" style="cursor: pointer"/>
                                   <input class="dropdown-item" wire:click="updateBoard({{$in->task->id}},3)"  type="text" readonly value="Pending" style="cursor: pointer"/>
                                   <input class="dropdown-item" wire:click="updateBoard({{$in->task->id}},4)"  type="text" readonly value="Completed" style="cursor: pointer"/>
-                                  <input class="dropdown-item" wire:click="updateBoard({{$in->task->id}},5)"  type="text" readonly value="Due" style="cursor: pointer"/>
                                 </div>
                               </div>
                         </div>
                       </div>
                       <div class="card-footer" style="background: transparent;">
                         <div class="float-right mt-2">
-                            <span class="badge badge-primary">{{ $in->task->created_at->diffForHumans() }}</span>
+                            <span class="badge badge-primary">{{ $in->created_at->diffForHumans() }}</span>
                             <span class="badge badge-primary">{{ $in->task->priority->name }}</span>
                         </div>
                       </div>
@@ -72,7 +70,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+    <div class="col-md-3 col-sm-3 col-lg-3 col-xs-12">
         <div class="card shadow-lg rounded" >
             <div class="card-header" style="background-image: linear-gradient(to right,#CAC531, #F3F9A7); color: white;">
                 <div class="card-title font-weight-bolder">
@@ -84,22 +82,21 @@
                 <div class="card" style="border-radius: 10px">
                     <div class="card-body">
                         {{ $pending->task->heading }}
-                        <div class="float-right">
+                        <div class="float-right" >
                             <div class="dropdown">
                                 <div class="dropdown-toggle" type="button" id="dropdownMenu{{ $pending->id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 </div>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenu{{ $pending->id }}">
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu{{ $pending->id }}" style="left: -125px;">
                                   <input class="dropdown-item" wire:click="updateBoard({{$pending->task->id}},2)" type="text" readonly value="In Progress" style="cursor: pointer"/>
                                   <input class="dropdown-item" wire:click="updateBoard({{$pending->task->id}},3)"  type="text" readonly value="Pending" style="cursor: pointer"/>
                                   <input class="dropdown-item" wire:click="updateBoard({{$pending->task->id}},4)"  type="text" readonly value="Completed" style="cursor: pointer"/>
-                                  <input class="dropdown-item" wire:click="updateBoard({{$pending->task->id}},5)"  type="text" readonly value="Due" style="cursor: pointer"/>
                                 </div>
                               </div>
                         </div>
                       </div>
                       <div class="card-footer" style="background: transparent;">
                         <div class="float-right mt-2">
-                            <span class="badge badge-primary">{{ $pending->task->created_at->diffForHumans() }}</span>
+                            <span class="badge badge-primary">{{ $pending->created_at->diffForHumans() }}</span>
                             <span class="badge badge-primary">{{ $pending->task->priority->name }}</span>
                         </div>
                       </div>
@@ -108,7 +105,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+    <div class="col-md-3 col-sm-3 col-lg-3 col-xs-12">
         <div class="card shadow-lg rounded">
             <div class="card-header" style="background-image: linear-gradient(to right,#11998e, #38ef7d); color: white;">
                 <div class="card-title font-weight-bolder">
@@ -120,22 +117,21 @@
                 <div class="card" style="border-radius: 10px">
                     <div class="card-body">
                         {{ $complete->task->heading }}
-                        <div class="float-right">
+                        <div class="float-left" style="margin-right: 12px;">
                             <div class="dropdown">
                                 <div class="dropdown-toggle" type="button" id="dropdownMenu{{ $complete->id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 </div>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenu{{ $complete->id }}">
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu{{ $complete->id }}" >
                                   <input class="dropdown-item" wire:click="updateBoard({{$complete->task->id}},2)" type="text" readonly value="In Progress" style="cursor: pointer"/>
                                   <input class="dropdown-item" wire:click="updateBoard({{$complete->task->id}},3)"  type="text" readonly value="Pending" style="cursor: pointer"/>
                                   <input class="dropdown-item" wire:click="updateBoard({{$complete->task->id}},4)"  type="text" readonly value="Completed" style="cursor: pointer"/>
-                                  <input class="dropdown-item" wire:click="updateBoard({{$complete->task->id}},5)"  type="text" readonly value="Due" style="cursor: pointer"/>
                                 </div>
                               </div>
                         </div>
                       </div>
                       <div class="card-footer" style="background: transparent;">
                         <div class="float-right mt-2">
-                            <span class="badge badge-primary">{{ $complete->task->created_at->diffForHumans() }}</span>
+                            <span class="badge badge-primary">{{ $complete->created_at->diffForHumans() }}</span>
                             <span class="badge badge-primary">{{ $complete->task->priority->name }}</span>
                         </div>
                       </div>
@@ -144,7 +140,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+    {{-- <div class="col-md-3 col-sm-3 col-lg-3 col-xs-12">
         <div class="card shadow-lg rounded">
             <div class="card-header " style="background-image: linear-gradient(to right,#ED213A, #93291E); color: white;">
                 <div class="card-title font-weight-bolder">
@@ -171,7 +167,7 @@
                       </div>
                       <div class="card-footer" style="background: transparent;">
                         <div class="float-right mt-2">
-                            <span class="badge badge-primary">{{ $due->task->created_at->diffForHumans() }}</span>
+                            <span class="badge badge-primary">{{ $due->created_at->diffForHumans() }}</span>
                             <span class="badge badge-primary">{{ $due->task->priority->name }}</span>
                         </div>
                       </div>
@@ -179,5 +175,5 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
