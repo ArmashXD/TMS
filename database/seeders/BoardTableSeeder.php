@@ -29,6 +29,9 @@ class BoardTableSeeder extends Seeder
             ],
             [
                 'name' => 'Due',
+            ],
+            [
+                'name' => 'Completed'
             ]
         ];
 

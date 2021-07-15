@@ -73,7 +73,15 @@
         <meta name="msapplication-TileImage" content="{{ asset('favicon/ms-icon-144x144.png') }}">
     @endif
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
-
+    <style>
+        .main-sidebar.sidebar-dark-primary.elevation-4{
+            background-image: linear-gradient(#0F2027, #203A43, #2C5364);
+        }
+        .sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+            background-color: white;
+            color: black;
+        }
+    </style>
 </head>
 
 <body class="@yield('classes_body')" @yield('body_data')>
