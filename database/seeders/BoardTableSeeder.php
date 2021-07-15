@@ -30,9 +30,6 @@ class BoardTableSeeder extends Seeder
             [
                 'name' => 'Due',
             ],
-            [
-                'name' => 'Completed'
-            ]
         ];
 
         foreach($boards as $board)

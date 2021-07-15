@@ -29,7 +29,7 @@
           </div>
           <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
             <div class="form-group ">
-              <label for="exampleInputPassword1">Content</label>
+              <label for="exampleInputPassword1">Content (OPTIONAL)</label>
               <textarea class="form-control" wire:model="content" rows="10"></textarea>
             </div>
           </div>

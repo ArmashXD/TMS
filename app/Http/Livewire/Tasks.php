@@ -5,7 +5,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Task;
 use App\Helpers\StringHelper;
-
+use App\Models\TaskBoard;
+use DB;
 class Tasks extends Component
 {
     public $userId, $title, $content, $selected_id, $priority;
@@ -23,6 +24,14 @@ class Tasks extends Component
         $task = Task::find($id);
         $task->status = $task->status == false ? true : false;
         $task->update();
+        if($task->status)
+        {
+            TaskBoard::create([ 'task_id' => $task->id,'board_id' => 1]);
+        }
+        else
+        {
+            $task = DB::table('task_boards')->where(['task_id' => $task->id])->delete();
+        }
     }
 
     public function storeTask()

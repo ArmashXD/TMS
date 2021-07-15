@@ -1,6 +1,6 @@
 <div class="">
-    <h4>Your Tasks
-
+    <h4>YOUR TASKS
+      
         @if($createMode)
         <button class="btn btn-danger float-right shadow-lg rounded font-weight-bold" wire:click="$set('createMode', false)"> 
             CANCEL
@@ -10,6 +10,9 @@
             ADD NEW
         </button>
         @endif
+        <a href="{{ route('home') }}" class="btn btn-default float-right shadow-lg rounded font-weight-bold mr-2"> 
+            BACK
+        </a>
     </h4>
   <br><br>
   @if (count($errors) > 0)
