@@ -16,8 +16,6 @@ class CreateTableBoards extends Migration
         Schema::create('boards', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->unsignedBigInteger('task_id')->nullable();
-            $table->foreign('task_id')->references('id')->on('tasks')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }
