@@ -14,6 +14,11 @@
 @section('auth_header', __('adminlte::adminlte.register_message'))
 
 @section('auth_body')
+<style>
+    .register-page{
+        background-image: linear-gradient(to right, #0F2027, #203A43,#2C5364);
+    }
+</style>
     <form action="{{ $register_url }}" method="post">
         {{ csrf_field() }}
 
@@ -84,7 +89,7 @@
         </div>
 
         {{-- Register button --}}
-        <button type="submit" class="btn btn-block {{ config('adminlte.classes_auth_btn', 'btn-flat btn-primary') }}">
+        <button type="submit" class="btn btn-block {{ config('adminlte.classes_auth_btn', 'btn-flat btn-primary') }}" style="border-radius:20px;">
             <span class="fas fa-user-plus"></span>
             {{ __('adminlte::adminlte.register') }}
         </button>
