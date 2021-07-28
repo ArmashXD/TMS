@@ -15,7 +15,15 @@ This small application is designed to track your daily tasks, A little fun proje
 # Installation
 
 composer install
+<br>
 npm install && npm run dev
+<br>
+
 php artisan migrate
+<br>
+
 php artisan db:seed
+<br>
+
 php artisan serve
+<br>
