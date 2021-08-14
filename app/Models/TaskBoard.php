@@ -42,4 +42,15 @@ class TaskBoard extends Model
     {
         return $this->belongsTo(Task::class);
     }
+
+
+    public function scopeBoardById($query, $board_id)
+    {
+        return $query->where('board_id',$board_id);
+    }
+
+    public function scopeOrderByDesc($query)
+    {
+        return $query->orderBy('id', 'DESC');
+    }
 }

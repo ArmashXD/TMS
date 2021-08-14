@@ -13,11 +13,11 @@ class Boards extends Component
 
     public function render()
     {
-        return view('livewire.boards.index', ['news' => TaskBoard::where('board_id', 1)->orderBy('id','desc')->get(), 
-        'in_progress' => TaskBoard::where('board_id', 2)->orderBy('id','desc')->get(), 
-        'pendings' => TaskBoard::where('board_id', 3)->orderBy('id','desc')->get(),
-        'completed' => TaskBoard::where('board_id', 4)->orderBy('id','desc')->get(),
-        'dues' =>TaskBoard::where('board_id', 5)->orderBy('id','desc')->get()
+        return view('livewire.boards.index', ['news' => TaskBoard::BoardById(1)->OrderByDesc()->get(), 
+        'in_progress' => TaskBoard::BoardById(2)->OrderByDesc()->get(), 
+        'pendings' => TaskBoard::BoardById(3)->OrderByDesc()->get(),
+        'completed' => TaskBoard::BoardById(4)->OrderByDesc()->get(),
+        'dues' =>TaskBoard::BoardById(5)->OrderByDesc()->get()
     ]);
     }
 

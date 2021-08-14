@@ -228,6 +228,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'StringHelper' => App\Helpers\StringHelper::class,
+        'ArrayHelper' => App\Helpers\ArrayHelper::class,
+        'Common' => App\Helpers\Common::class,
     ],
 
 ];

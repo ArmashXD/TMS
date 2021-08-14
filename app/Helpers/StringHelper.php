@@ -20,4 +20,5 @@ class StringHelper{
         return Str::limit($string, $start, $end='....');
     }
 
+    
 }

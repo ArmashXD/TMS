@@ -20,3 +20,11 @@ use App\Http\Controllers\Api\TaskController;
 // });
 
 Route::get('tasks', [TaskController::class, 'index']);
+
+Route::post('tasks/store',[TaskController::class, 'store']);
+
+Route::delete('task/destroy/{id}', [TaskController::class, 'destroy']);
+
+Route::get('task/show/{id}',[TaskController::class, 'show']);
+
+Route::post('task/update',[TaskController::class, 'update']);
