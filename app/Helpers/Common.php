@@ -28,7 +28,8 @@ class Common{
         {
             return response()->json([
                 'message' => 'Some Error Occured While Processing your request',
-                'status' => 422
+                'status' => $status,
+                
             ], $code);
         }
     }

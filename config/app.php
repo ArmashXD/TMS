@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -230,6 +231,8 @@ return [
         'StringHelper' => App\Helpers\StringHelper::class,
         'ArrayHelper' => App\Helpers\ArrayHelper::class,
         'Common' => App\Helpers\Common::class,
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class, 
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
     ],
 
 ];
